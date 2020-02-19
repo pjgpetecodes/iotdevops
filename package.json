@@ -1,0 +1,24 @@
+{
+  "name": "iotdevops",
+  "version": "1.0.0",
+  "description": "IoT DevOps Repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjgpetecodes/iotdevops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjgpetecodes/iotdevops/issues"
+  },
+  "homepage": "https://github.com/pjgpetecodes/iotdevops#readme",
+  "dependencies": {
+    "azure-iot-device": "^1.12.2",
+    "azure-iot-device-mqtt": "^1.11.2"
+  }
+}
