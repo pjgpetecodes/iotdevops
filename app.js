@@ -3,7 +3,12 @@
 
 'use strict';
 
-var security = require("./security.json");
+try {
+    var security = require("./security.json");
+// do stuff
+} catch (ex) {
+    var security = require("/mnt/security/security.json");
+}
 
 // The device connection string to authenticate the device with your IoT hub.
 //
