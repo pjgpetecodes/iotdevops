@@ -3,6 +3,22 @@
 
 'use strict';
 
+const Gpio = require('onoff').Gpio;
+const redLED = new Gpio(15, 'out');
+const greenLED = new Gpio(17, 'out');
+
+// Toggle the state of the LEDs every 200ms
+const flashRed = setInterval(_ => redLED.writeSync(redLED.readSync() ^ 1), 200);
+const flashGreen = setInterval(_ => greenLED.writeSync(greenLED.readSync() ^ 1), 200);
+
+// Stop blinking the LED after 5 seconds
+setTimeout(_ => {
+  clearInterval(flashRed); // Stop blinking
+  clearInterval(flashGreen); // Stop blinking
+  redLED.unexport();    // Unexport GPIO and free resources
+  greenLED.unexport();    // Unexport GPIO and free resources
+}, 5000);
+
 try {
     var security = require("./security.json");
 // do stuff
