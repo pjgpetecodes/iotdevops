@@ -16,6 +16,6 @@ RUN npm install --production
 
 COPY app.js ./
 
-# USER root
+USER root
 
 CMD ["app.js"]
