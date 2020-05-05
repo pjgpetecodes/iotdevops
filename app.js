@@ -72,7 +72,7 @@ setInterval(function(){
     if (err) {
       console.error('send error: ' + err.toString());
     } else {
-      console.log('message sent to the IoT Hub... Jenkins Here!');
+      console.log('message sent to the IoT Hub!');
     }
   });
 }, 1000);
