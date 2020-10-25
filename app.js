@@ -3,7 +3,7 @@
 
 'use strict';
 
-
+/*
 
 const Gpio = require('onoff').Gpio;
 const redLED = new Gpio(15, 'out');
@@ -21,7 +21,7 @@ setTimeout(_ => {
   greenLED.unexport();    // Unexport GPIO and free resources
 }, 5000);
 
-
+*/
 
 try {
     var security = require("./security.json");
