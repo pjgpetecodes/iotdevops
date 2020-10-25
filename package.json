@@ -20,6 +20,6 @@
   "dependencies": {
     "azure-iot-device": "^1.12.2",
     "azure-iot-device-mqtt": "^1.11.2",
-    "onoff": "5.0.1"        
+    "onoff": "5.0.1"
   }
 }
