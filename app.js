@@ -3,7 +3,7 @@
 
 'use strict';
 
-
+/*
 
 const Gpio = require('onoff').Gpio;
 const redLED = new Gpio(15, 'out');
@@ -21,7 +21,7 @@ setTimeout(_ => {
   greenLED.unexport();    // Unexport GPIO and free resources
 }, 5000);
 
-
+*/
 
 try {
     var security = require("./security.json");
@@ -63,9 +63,9 @@ setInterval(function(){
 
   // Add a custom application property to the message.
   // An IoT hub can filter on these properties without access to the message body.
-  message.properties.add('temperatureAlertBrighton', (temperature > 30) ? 'true' : 'false');
+  message.properties.add('temperatureAlert', (temperature > 30) ? 'true' : 'false');
 
-  console.log('Sending message to the IoT Hub! Hi Brighton!: ' + message.getData());
+  console.log('Sending message to the IoT Hub!: ' + message.getData());
 
   // Send the message.
   client.sendEvent(message, function (err) {
