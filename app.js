@@ -59,7 +59,7 @@ setInterval(function(){
 
   // Add a custom application property to the message.
   // An IoT hub can filter on these properties without access to the message body.
-  message.properties.add('temperatureAlert!', (temperature > 30) ? 'true' : 'false');
+  message.properties.add('temperatureAlert! Hello IoT North', (temperature > 30) ? 'true' : 'false');
 
   console.log('Sending message to the IoT Hub! ' + message.getData());
 
